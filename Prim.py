@@ -1,17 +1,17 @@
 import os
 
 grafo = {'a': [('p',4), ('j',15), ('b',1)],
-         	'b': [('a',1), ('d',2), ('e',2), ('c',2)],
-			'j': [('a',15),('c',6)],
-			'p': [('a',4),('d',8)],
-			'd': [('b',2), ('g',3),('p',8)],
-			'e': [('b',2), ('g',9), ('f',5), ('c',2),('h',4)],
-			'c': [('b',2), ('e',2), ('f',5), ('i',20),('j',6)],
-			'g': [('d',3), ('e',9), ('h',1)],
-			'f': [('h',10), ('e',5), ('c',5),('i',2)],
-			'i': [('c',20),('f',2)],
-			'h': [('g',1),('e',4),('f',10)] 
-		}
+        'b': [('a',1), ('d',2), ('e',2), ('c',2)],
+        'j': [('a',15),('c',6)],
+        'p': [('a',4),('d',8)],
+        'd': [('b',2), ('g',3),('p',8)],
+        'e': [('b',2), ('g',9), ('f',5), ('c',2),('h',4)],
+        'c': [('b',2), ('e',2), ('f',5), ('i',20),('j',6)],
+        'g': [('d',3), ('e',9), ('h',1)],
+        'f': [('h',10), ('e',5), ('c',5),('i',2)],
+        'i': [('c',20),('f',2)],
+        'h': [('g',1),('e',4),('f',10)] 
+		    }
 
 
 listaVisitados = []
@@ -20,7 +20,8 @@ listaOrdenada = []
 
 
 #1.- Origem do nó
-ori = input("\nSelecione nó de origem: ")
+print(grafo)
+ori = input("\nSelecione nó de origem de A a H: ")
 #2.- Adiciona como visitado
 listaVisitados.append(ori)
 
@@ -79,5 +80,6 @@ while listaOrdenada:
       
 print("\n\nGrafo final:\n")
 for key, lista in grafoResultante.items():
-  print(key)
+  print(key, grafo[key])
 print(lista)
+os.system("pause")
